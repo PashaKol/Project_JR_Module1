@@ -1,8 +1,10 @@
 package ua.com.javarush.pashakolomiiets.modul1;
 
+import java.io.IOException;
 import java.util.Scanner;
 
 
+import static ua.com.javarush.pashakolomiiets.BruteForceFile.bruteForseFile;
 import static ua.com.javarush.pashakolomiiets.modul1.CoderFile.coderFile;
 import static ua.com.javarush.pashakolomiiets.modul1.DeCoderFile.deCoderFile;
 import static ua.com.javarush.pashakolomiiets.modul1.Сhoice.action;
@@ -11,7 +13,7 @@ import static ua.com.javarush.pashakolomiiets.modul1.Сhoice.choice;
 
 public class Main {
     private static Scanner scanner = new Scanner(System.in);
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
         action();
         int choice = scanner.nextInt();
         choice(choice);
@@ -26,6 +28,9 @@ public class Main {
             System.out.println("Укажите  ключ по которому нужно расшифровать файл");
             int key = scanner.nextInt();
             deCoderFile(key);
+        }
+        else if(choice == 3 ){
+            bruteForseFile();
         }
 
     }

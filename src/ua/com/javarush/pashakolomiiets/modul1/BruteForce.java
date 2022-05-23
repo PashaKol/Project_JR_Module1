@@ -9,8 +9,8 @@ public class BruteForce {
             "0123456789";
 
     public static String bruteForce(String text) {
-        int key = 1;
-        String text1 = text;
+        int key = 0;
+        String text1 = "";
         while (key < ALPHABET.length()) {
             text1 = deCoder(text, key);
             System.out.println(text1);
@@ -20,4 +20,7 @@ public class BruteForce {
         }
         return text1;
     }
+
 }
+
+

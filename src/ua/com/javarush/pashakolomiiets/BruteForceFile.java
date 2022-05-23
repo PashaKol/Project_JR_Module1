@@ -1,13 +1,16 @@
-package ua.com.javarush.pashakolomiiets.modul1;
+package ua.com.javarush.pashakolomiiets;
+
 
 import java.io.*;
 import java.nio.file.Path;
 
+import static ua.com.javarush.pashakolomiiets.modul1.BruteForce.bruteForce;
 import static ua.com.javarush.pashakolomiiets.modul1.DeCoder.deCoder;
 
-public class DeCoderFile {
+public class BruteForceFile {
 
-    public static void deCoderFile(int key) {
+
+    public static void bruteForseFile() throws IOException {
         Path pathToFileForCoder = Path.of("src/ua/com/javarush/pashakolomiiets/modul1/FileforCoder.txt").toAbsolutePath();
         Path pathToFileForDeCedor = Path.of("src/ua/com/javarush/pashakolomiiets/modul1/Decoderfile.txt").toAbsolutePath();
 
@@ -17,12 +20,15 @@ public class DeCoderFile {
 
             while (bufferedDeCoder.ready()) {
                 String text = bufferedDeCoder.readLine();
-                decoderText.write(deCoder(text, key));
+                decoderText.write(bruteForce(text));
                 decoderText.flush();
             }
 
+
         } catch (IOException e) {
-            throw new RuntimeException(e);
+            e.printStackTrace();
         }
+
+
     }
 }
