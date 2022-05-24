@@ -1,18 +1,18 @@
-package ua.com.javarush.pashakolomiiets;
+package ua.com.javarush.pashakolomiiets.modul1;
 
 
 import java.io.*;
 import java.nio.file.Path;
 
 import static ua.com.javarush.pashakolomiiets.modul1.BruteForce.bruteForce;
-import static ua.com.javarush.pashakolomiiets.modul1.DeCoder.deCoder;
+
 
 public class BruteForceFile {
 
 
-    public static void bruteForseFile() throws IOException {
+    public static void bruteForseFile()  {
         Path pathToFileForCoder = Path.of("src/ua/com/javarush/pashakolomiiets/modul1/FileforCoder.txt").toAbsolutePath();
-        Path pathToFileForDeCedor = Path.of("src/ua/com/javarush/pashakolomiiets/modul1/Decoderfile.txt").toAbsolutePath();
+        Path pathToFileForDeCedor = Path.of("src/ua/com/javarush/pashakolomiiets/modul1/FileWithBrute.txt").toAbsolutePath();
 
         try (FileReader coderText = new FileReader(pathToFileForCoder.toFile());
              BufferedReader bufferedDeCoder = new BufferedReader(coderText);
@@ -24,9 +24,10 @@ public class BruteForceFile {
                 decoderText.flush();
             }
 
-
+            System.out.println("Ваш файл расшифрован методом Брут Форс. Он находится в файле  - FileWithBrute.txt" );
         } catch (IOException e) {
-            e.printStackTrace();
+            System.err.println("Файл не найде!");
+            System.err.println("Укажите действующий путь к файлу! Вы указали путь - " +  e.getMessage());
         }
 
 
