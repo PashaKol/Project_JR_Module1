@@ -26,7 +26,7 @@ public class BruteForceFile {
 
             System.out.println("Ваш файл расшифрован методом Брут Форс. Он находится в файле  - FileWithBrute.txt" );
         } catch (IOException e) {
-            System.err.println("Файл не найде!");
+            System.err.println("Файл не найденм!");
             System.err.println("Укажите действующий путь к файлу! Вы указали путь - " +  e.getMessage());
         }
 

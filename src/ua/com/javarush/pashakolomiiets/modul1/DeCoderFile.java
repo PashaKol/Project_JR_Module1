@@ -23,7 +23,7 @@ public class DeCoderFile {
             }
             System.out.println("Ваш файл расшифрован. Он находится в файле  - Decoderfile.txt" );
         } catch (IOException e) {
-            System.err.println("Файл не найде!");
+            System.err.println("Файл не найден!");
             System.err.println("Укажите действующий путь к файлу! Вы указали путь - " +  e.getMessage());
         }
 
