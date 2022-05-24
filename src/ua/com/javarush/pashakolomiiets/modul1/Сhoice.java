@@ -11,6 +11,7 @@ import static ua.com.javarush.pashakolomiiets.modul1.DeCoderFile.deCoderFile;
 
 public class Сhoice {
 
+
     static Scanner scanner = new Scanner(System.in);
 
     public static void choice(int choice) {

@@ -13,6 +13,7 @@ public class BruteForce {
             text1 +=  key + ") ключ - " + coder(text, key) ;
             key += 1;
         }
+
         return text1;
     }
 
