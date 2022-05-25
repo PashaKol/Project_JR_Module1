@@ -1,16 +1,16 @@
-package ua.com.javarush.pashakolomiiets.modul1;
+package ua.com.javarush.pashakolomiiets.modul1.CoderDecoder;
 
 import java.io.*;
 import java.nio.file.Path;
 
-import static ua.com.javarush.pashakolomiiets.modul1.Coder.coder;
+import static ua.com.javarush.pashakolomiiets.modul1.CoderDecoder.Coder.coder;
 
 
 public class CoderFile {
 
     public static void coderFile(int key) {
-        Path pathOfOriginalText = Path.of("src/ua/com/javarush/pashakolomiiets/modul1/FileWithText.txt").toAbsolutePath();
-        Path pathToFileForCoder = Path.of("src/ua/com/javarush/pashakolomiiets/modul1/FileforCoder.txt").toAbsolutePath();
+        Path pathOfOriginalText = Path.of("src/ua/com/javarush/pashakolomiiets/modul1/CoderDecoder/FileWithText.txt").toAbsolutePath();
+        Path pathToFileForCoder = Path.of("src/ua/com/javarush/pashakolomiiets/modul1/CoderDecoder/FileforCoder.txt").toAbsolutePath();
 
         try ( FileReader originalText = new FileReader(pathOfOriginalText.toFile());
              BufferedReader bufferedCoder = new BufferedReader(originalText);

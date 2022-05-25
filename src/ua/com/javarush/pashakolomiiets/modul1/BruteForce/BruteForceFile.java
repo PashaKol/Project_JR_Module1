@@ -1,18 +1,18 @@
-package ua.com.javarush.pashakolomiiets.modul1;
+package ua.com.javarush.pashakolomiiets.modul1.BruteForce;
 
 
 import java.io.*;
 import java.nio.file.Path;
 
-import static ua.com.javarush.pashakolomiiets.modul1.BruteForce.bruteForce;
+import static ua.com.javarush.pashakolomiiets.modul1.BruteForce.BruteForce.bruteForce;
 
 
 public class BruteForceFile {
 
 
     public static void bruteForseFile()  {
-        Path pathToFileForCoder = Path.of("src/ua/com/javarush/pashakolomiiets/modul1/FileforCoder.txt").toAbsolutePath();
-        Path pathToFileForDeCedor = Path.of("src/ua/com/javarush/pashakolomiiets/modul1/FileWithBrute.txt").toAbsolutePath();
+        Path pathToFileForCoder = Path.of("src/ua/com/javarush/pashakolomiiets/modul1/CoderDecoder/FileforCoder.txt").toAbsolutePath();
+        Path pathToFileForDeCedor = Path.of("src/ua/com/javarush/pashakolomiiets/modul1/BruteForce/FileWithBrute.txt").toAbsolutePath();
 
         try (FileReader coderText = new FileReader(pathToFileForCoder.toFile());
              BufferedReader bufferedDeCoder = new BufferedReader(coderText);
