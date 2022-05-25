@@ -12,16 +12,16 @@ public class BruteForceFile {
 
     public static void bruteForseFile()  {
         Path pathToFileForCoder = Path.of("src/ua/com/javarush/pashakolomiiets/modul1/CoderDecoder/FileforCoder.txt").toAbsolutePath();
-        Path pathToFileForDeCedor = Path.of("src/ua/com/javarush/pashakolomiiets/modul1/BruteForce/FileWithBrute.txt").toAbsolutePath();
+        Path pathToFileWithBrute = Path.of("src/ua/com/javarush/pashakolomiiets/modul1/BruteForce/FileWithBrute.txt").toAbsolutePath();
 
-        try (FileReader coderText = new FileReader(pathToFileForCoder.toFile());
-             BufferedReader bufferedDeCoder = new BufferedReader(coderText);
-             FileWriter decoderText = new FileWriter(pathToFileForDeCedor.toFile())) {
+        try (FileReader fileReader = new FileReader(pathToFileForCoder.toFile());
+             BufferedReader bufferedReader = new BufferedReader(fileReader);
+             FileWriter fileWriter = new FileWriter(pathToFileWithBrute.toFile())) {
 
-            while (bufferedDeCoder.ready()) {
-                String text = bufferedDeCoder.readLine();
-                decoderText.write(bruteForce(text));
-                decoderText.flush();
+            while (bufferedReader.ready()) {
+                String text = bufferedReader.readLine();
+                fileWriter.write(bruteForce(text));
+                fileWriter.flush();
             }
 
             System.out.println("Ваш файл расшифрован методом Брут Форс. Он находится в файле  - FileWithBrute.txt" );

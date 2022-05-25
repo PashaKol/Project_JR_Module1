@@ -12,14 +12,14 @@ public class CoderFile {
         Path pathOfOriginalText = Path.of("src/ua/com/javarush/pashakolomiiets/modul1/CoderDecoder/FileWithText.txt").toAbsolutePath();
         Path pathToFileForCoder = Path.of("src/ua/com/javarush/pashakolomiiets/modul1/CoderDecoder/FileforCoder.txt").toAbsolutePath();
 
-        try ( FileReader originalText = new FileReader(pathOfOriginalText.toFile());
-             BufferedReader bufferedCoder = new BufferedReader(originalText);
-             FileWriter coder = new FileWriter(pathToFileForCoder.toFile())) {
+        try ( FileReader fileReader = new FileReader(pathOfOriginalText.toFile());
+             BufferedReader bufferedReader = new BufferedReader(fileReader);
+             FileWriter codfileWriterr = new FileWriter(pathToFileForCoder.toFile())) {
 
-            while (bufferedCoder.ready()) {
-                String text = bufferedCoder.readLine();
-                coder.write(coder(text, key));
-                coder.flush();
+            while (bufferedReader.ready()) {
+                String text = bufferedReader.readLine();
+                codfileWriterr.write(coder(text, key));
+                codfileWriterr.flush();
             }
             System.out.println("Ваш файл зашифрован. Он находится в файле  - FileforCoder.txt" );
 
